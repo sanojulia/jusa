@@ -1,5 +1,5 @@
-import HeroButton from '../components/HeroButton.jsx'
-import BodyButton from '../components/BodyButton.jsx'
+import Button from '../components/Button/Button.jsx';
+import styles from '../components/Button/Button.module.css';
 import { Link } from 'react-router-dom'
 
 export function Home() {
@@ -7,15 +7,15 @@ export function Home() {
         <>
             <h1>Home Page</h1>
 
-            <Link to="/womens">
-                <HeroButton text="SHOP WOMENS"/>
+            <Link to="/women">
+                <Button text="SHOP WOMENS" className={styles['hero-button']}/>
             </Link>
-            <Link to="/mens">
-                <HeroButton text="SHOP MENS"/>
+            <Link to="/men">
+                <Button text="SHOP MENS"/>
             </Link>
 
             <Link to="/">
-                <BodyButton text="HOME"/>
+                <Button text="HOME"/>
             </Link>
         </>
     )
