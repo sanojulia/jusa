@@ -10,7 +10,13 @@ import Sale from './pages/Sale/Sale';
 import Account from './pages/Account/Account';
 import Bag from './pages/Bag/Bag';
 
+import { Home } from './pages/home.jsx'
+import { Men } from './pages/men.jsx'
+import { Women } from './pages/women.jsx'
+
+
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -30,6 +36,7 @@ function App() {
       </div>
     </Router>
   );
+
 }
 
 export default App;
