@@ -5,10 +5,13 @@ import ProductFilters from '../../components/ProductFilters/ProductFilters';
 import { menProducts } from '../../mocks/products';
 import { changeFiltering } from '../../utils/changeFiltering';
 import { changeSorting } from '../../utils/changeSorting';
+import { useNavigate } from 'react-router-dom';
+
 const Men = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchedProducts = menProducts;    
@@ -18,13 +21,17 @@ const Men = () => {
   }, []);
 
   const handleFilterChange = (filters) => {
-    let filtered = changeFiltering(filters, filtered);
+    let filtered = changeFiltering(filters, products);
     setFilteredProducts(filtered);
   };
 
   const handleSortChange = (sortBy) => {
     const sorted = changeSorting(sortBy, filteredProducts);
     setFilteredProducts(sorted);
+  };
+
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
   };
 
   if (loading) {
@@ -46,7 +53,9 @@ const Men = () => {
 
         <div className={styles.productGrid}>
           {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} onClick={() => handleProductClick(product.id)}>
+              <ProductCard key={product.id} product={product} />
+            </div>
           ))}
         </div>
 

@@ -5,11 +5,13 @@ import ProductFilters from '../../components/ProductFilters/ProductFilters';
 import { menProducts, womenProducts } from '../../mocks/products';
 import { changeFiltering } from '../../utils/changeFiltering';
 import { changeSorting } from '../../utils/changeSorting';
+import { useNavigate } from 'react-router-dom';
 
 const Sale = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchedProducts = [...womenProducts.filter(product => product.isSale), ...menProducts.filter(product => product.isSale)];
@@ -20,13 +22,17 @@ const Sale = () => {
   }, []);
 
     const handleFilterChange = (filters) => {
-      let filtered = changeFiltering(filters, filtered);
+      let filtered = changeFiltering(filters, products);
       setFilteredProducts(filtered);
     };
 
   const handleSortChange = (sortBy) => {
     const sorted = changeSorting(sortBy, filteredProducts);
     setFilteredProducts(sorted);
+  };
+
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
   };
 
   if (loading) {
@@ -49,7 +55,9 @@ const Sale = () => {
 
         <div className={styles.productGrid}>
           {filteredProducts.map(product => (
-            <ProductCard key={`${product.id}+${product.name}`} product={product} />
+            <div key={product.id} onClick={() => handleProductClick(product.id)}>
+              <ProductCard key={product.id} product={product} />
+            </div>
           ))}
         </div>
 

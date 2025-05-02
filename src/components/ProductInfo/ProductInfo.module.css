@@ -1,0 +1,45 @@
+.container {
+    display: block;
+    text-align: left;
+}
+
+.name {
+    font-weight: 400;
+    color: #2d2d2d;
+    margin: 0;
+}
+
+.description {
+    text-align: justify;
+    font-size: 0.6rem;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.price {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2d2d2d;
+}
+
+.salePrice {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #d01345;
+}
+  
+.originalPrice {
+    font-size: 0.7rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.colors {
+    font-size: 0.6rem;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}

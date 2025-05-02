@@ -37,6 +37,7 @@ const Header = () => {
           
           <nav className={`${styles.navMenuContainer} ${isMenuOpen ? styles.navMenuActive : ''}`}>
             <ul className={styles.navMenu}>
+              <li><Link to="/" className={styles.navLink}>HOME</Link></li>
               <li><Link to="/women" className={styles.navLink}>WOMEN</Link></li>
               <li><Link to="/men" className={styles.navLink}>MEN</Link></li>
               <li><Link to="/sale" className={styles.navLink}>SALE</Link></li>

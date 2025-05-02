@@ -3,6 +3,7 @@ export const womenProducts = [
       id: 1,
       name: "Elegant Blouse",
       brand: "JUSA Pro",
+      description: "Elevate your wardrobe with the timeless sophistication of the Elegant Blouse. Crafted in a soft and versatile beige hue, this blouse features a graceful design that complements any outfit. Its lightweight fabric offers exceptional comfort, making it perfect for both casual outings and formal occasions. With its impeccable tailoring and classic appeal, the Elegant Blouse is a must-have for anyone who values effortless elegance.",
       price: 89.99,
       originalPrice: 99.99,
       isSale: true,
@@ -10,6 +11,7 @@ export const womenProducts = [
       sizes: ["XS", "S", "M", "L"],
       type: "Blouses",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/women/d1-1.jpg',
         hover: '/images/women/d1-2.jpg'
@@ -108,6 +110,7 @@ export const womenProducts = [
       sizes: ["XS", "S", "M", "L"],
       type: "Sweaters",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/women/n1-1.jpg',
         hover: '/images/women/n1-2.jpg'
@@ -137,6 +140,7 @@ export const womenProducts = [
       sizes: ["XS", "S", "M", "L"],
       type: "Sweaters",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/women/n3-1.jpg',
         hover: '/images/women/n3-2.jpg'
@@ -179,6 +183,7 @@ export const womenProducts = [
       sizes: ["XS", "S", "M", "L"],
       type: "Jackets",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/women/o2-1.jpg',
         hover: '/images/women/o2-2.jpg'
@@ -258,7 +263,7 @@ export const womenProducts = [
 
 export const menProducts = [
     {
-      id: 1,
+      id: 19,
       name: "Classic Cashmere Sweater",
       brand: "JUSA Pro",
       price: 89.99,
@@ -266,15 +271,16 @@ export const menProducts = [
       isSale: true,
       colors: ["Blue", "Green"],
       sizes: ["S", "M", "L", "XL"],
-      type: "Jackets",
+      type: "Sweaters",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/men/j1-1.jpg',
         hover: '/images/men/j1-2.jpg'
       }
     },
     {
-      id: 2,
+      id: 20,
       name: "Vintage Sweater",
       brand: "JUSA Pro",
       price: 79.99,
@@ -282,14 +288,14 @@ export const menProducts = [
       isSale: true,
       colors: ["Light Blue"],
       sizes: ["S", "M", "L", "XL"],
-      type: "Jackets",
+      type: "Sweaters",
       image: {
         main: '/images/men/j2-1.jpg',
         hover: '/images/men/j2-2.jpg'
       }
     },
     {
-      id: 3,
+      id: 21,
       name: "Premium Cotton Long Sleeve T-Shirt",
       brand: "JUSA Sport",
       price: 24.99,
@@ -304,7 +310,7 @@ export const menProducts = [
       }
     },
     {
-      id: 4,
+      id: 22,
       name: "Stripe T-Shirt",
       brand: "JUSA Sport",
       price: 45,
@@ -312,13 +318,14 @@ export const menProducts = [
       sizes: ["S", "M", "L", "XL"],
       type: "Shirts",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/men/s2-1.jpg',
         hover: '/images/men/s2-2.jpg'
       }
     },
     {
-      id: 5,
+      id: 23,
       name: "Casual Denim Jacket",
       brand: "JUSA Eco",
       price: 49.99,
@@ -333,7 +340,7 @@ export const menProducts = [
       }
     },
     {
-      id: 6,
+      id: 24,
       name: "Wool Sweater",
       brand: "JUSA Eco",
       price: 115,
@@ -341,13 +348,14 @@ export const menProducts = [
       sizes: ["S", "M", "L", "XL"],
       type: "Sweaters",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/men/s4-1.jpg',
         hover: '/images/men/s4-2.jpg'
       }
     },
     {
-      id: 7,
+      id: 25,
       name: "Classic White Shirt",
       brand: "JUSA Pro",
       price: 39.99,
@@ -362,7 +370,7 @@ export const menProducts = [
       }
     },
     {
-      id: 8,
+      id: 26,
       name: "Classic Denim Shirt",
       brand: "JUSA Sport",
       price: 44,
@@ -370,20 +378,21 @@ export const menProducts = [
       sizes: ["S", "M", "L", "XL"],
       type: "Shirts",
       isNew: true,
+      isNewColletion: true,
       image: {
         main: '/images/men/s6-1.jpg',
         hover: '/images/men/s6-2.jpg'
       }
     },
     {
-      id: 9,
+      id: 27,
       name: "Classic Hat",
       brand: "JUSA Eco",
       price: 59.99,
       originalPrice: 79.99,
       isSale: true,
       colors: ["Red", "Gray"],
-      sizes: [],
+      sizes: ["One Size"],
       type: "Accessories",
       image: {
         main: '/images/men/accessories-1.jpg',
@@ -391,7 +400,7 @@ export const menProducts = [
       }
     },
     {
-      id: 10,
+      id: 28,
       name: "Wool Hat",
       brand: "JUSA Eco",
       price: 34,
