@@ -21,7 +21,8 @@ const ProductInfo = ({ product }) => {
                 <span className={styles.price}>€{price.toFixed(2)}</span>
                 )}
             </div>
-            <p className={styles.description}><span style={{ fontWeight: "bold" }}>Description:</span><br />{description}</p>
+            <p className={styles.descriptionHead}>Description:</p>
+            <p className={styles.description}>{description}</p>
 
             <ColourSelector colours={colors}/>
             <SizeSelector sizes={sizes}/>

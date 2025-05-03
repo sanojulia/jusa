@@ -1,7 +1,7 @@
 .addButton {
     background-color: hsl(120, 30%, 48%);
     color: white;
-    font-size: 0.8em;
+    font-size: clamp(0.875rem, 2vw, 0.875rem);
     border: none;
     padding: 5px;
     cursor: pointer;
