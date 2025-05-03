@@ -29,11 +29,7 @@ const ProductCard = ({ product }) => {
       
       <div className={styles.details}>
         <h3 className={styles.name}>{name}</h3>
-        <div className={styles.colors}>
-          {colors?.map((color, index) => (
-            <span key={index} className={styles.color}>{color}</span>
-          ))}
-        </div>
+        <div className={styles.colors}>{colors.join(', ')}</div>
         <div className={styles.priceContainer}>
           {originalPrice ? (
             <>
