@@ -4,7 +4,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import ProductFilters from '../../components/ProductFilters/ProductFilters';
 import { menProducts, womenProducts } from '../../mocks/products';
 import { changeFiltering } from '../../utils/changeFiltering';
-import { changeSorting } from '../../utils/changeSorting';
+import { ChangeSorting } from '../../utils/ChangeSorting';
 
 const Sale = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +25,7 @@ const Sale = () => {
     };
 
   const handleSortChange = (sortBy) => {
-    const sorted = changeSorting(sortBy, filteredProducts);
+    const sorted = ChangeSorting(sortBy, filteredProducts);
     setFilteredProducts(sorted);
   };
 
