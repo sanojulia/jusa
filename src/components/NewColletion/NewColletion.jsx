@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import styles from './NewColletion.module.css'
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { menProducts, womenProducts } from '../../mocks/products';
-
+import { useNavigate } from 'react-router-dom';
 
 const NewColletion = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
     const fetchedProducts = [...womenProducts.filter(product => product.isNewColletion), ...menProducts.filter(product => product.isNewColletion)];
@@ -26,6 +27,10 @@ const NewColletion = () => {
         setFilteredProducts(sorted);
     };
 
+    const handleProductClick = (id) => {
+      navigate(`/product/${id}`);
+    };
+
     if (loading) {
         return <div className={styles.loading}>Loading...</div>;
     }
@@ -38,7 +43,9 @@ const NewColletion = () => {
 
         <div className={styles.productGrid}>
           {filteredProducts.map(product => (
-            <ProductCard key={`${product.id}+${product.name}`} product={product} />
+            <div key={product.id} onClick={() => handleProductClick(product.id)}>
+              <ProductCard key={product.id} product={product} />
+            </div>
           ))}
         </div>
             

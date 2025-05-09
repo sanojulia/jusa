@@ -53,7 +53,7 @@ const Header = () => {
               </button>
             </div>
             <div className={styles.userActions}>
-              <Link to="/account" className={styles.actionButton} aria-label="Account">
+              <Link to="/customerdetails" className={styles.actionButton} aria-label="CustomerDetails">{/* <Link to="/account" className={styles.actionButton} aria-label="Account"> */}
                 <i className="far fa-user"></i>
               </Link>
               <Link to="/bag" className={styles.actionButton} aria-label="Shopping Bag">

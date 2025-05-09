@@ -5,7 +5,7 @@ import ProductFilters from '../../components/ProductFilters/ProductFilters';
 import { menProducts, womenProducts } from '../../mocks/products';
 import { changeFiltering } from '../../utils/changeFiltering';
 import { useNavigate } from 'react-router-dom';
-import { ChangeSorting } from '../../utils/ChangeSorting';
+import { changeSorting } from '../../utils/changeSorting';
 
 
 const NewIn = () => {
@@ -27,7 +27,7 @@ const NewIn = () => {
   };
 
   const handleSortChange = (sortBy) => {
-    const sorted = ChangeSorting(sortBy, filteredProducts);
+    const sorted = changeSorting(sortBy, filteredProducts);
     setFilteredProducts(sorted);
   };
 
