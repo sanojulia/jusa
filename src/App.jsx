@@ -11,6 +11,7 @@ import Sale from './pages/Sale/Sale';
 import Account from './pages/Account/Account';
 import Bag from './pages/Bag/Bag';
 import Product from './pages/Product/Product'
+import CustomerDetails from './pages/CustomerDetails/CustomerDetails';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/new-in" element={<NewIn />} />
             <Route path="/sale" element={<Sale />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/customerdetails" element={<CustomerDetails />} />
             <Route path="/bag" element={<Bag />} />
             <Route path="/product/:id" element={<Product />} />
           </Routes> 
