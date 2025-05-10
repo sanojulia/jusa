@@ -162,7 +162,7 @@
   }
 
   .searchContainer.searchActive {
-    position: absolute;
+    position: relative;  /*FIX-rendering Changed from absolute to relative - Sano*/
     top: 100%;
     left: 0;
     width: 100%;
@@ -239,6 +239,14 @@
 
   .navMenuActive {
     left: 0;
+  }
+  
+  .closeNavMenu {
+  position:absolute;
+  right: 0;
+  top: 0;
+  padding: 3em;
+  cursor: pointer;
   }
 
   .navMenu {

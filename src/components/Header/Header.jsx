@@ -36,7 +36,12 @@ const Header = () => {
           </div>
           
           <nav className={`${styles.navMenuContainer} ${isMenuOpen ? styles.navMenuActive : ''}`}>
-            <ul className={styles.navMenu} onClick={toggleMenu}>
+            <ul className={styles.navMenu}>
+              {isMenuOpen && (
+                <div className={styles.closeNavMenu} onClick={toggleMenu}>
+                  <i className="fa-solid fa-xmark fa-xl" style={{ color: "#ffffff" }}></i>
+                </div>
+              )}
               <li><Link to="/" className={styles.navLink}>HOME</Link></li>
               <li><Link to="/women" className={styles.navLink}>WOMEN</Link></li>
               <li><Link to="/men" className={styles.navLink}>MEN</Link></li>
