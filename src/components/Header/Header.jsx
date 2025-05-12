@@ -36,7 +36,12 @@ const Header = () => {
           </div>
           
           <nav className={`${styles.navMenuContainer} ${isMenuOpen ? styles.navMenuActive : ''}`}>
-            <ul className={styles.navMenu} onClick={toggleMenu}>
+            <ul className={styles.navMenu}>
+              {isMenuOpen && (
+                <div className={styles.closeNavMenu} onClick={toggleMenu}>
+                  <i className="fa-solid fa-xmark fa-xl" style={{ color: "#ffffff" }}></i>
+                </div>
+              )}
               <li><Link to="/" className={styles.navLink}>HOME</Link></li>
               <li><Link to="/women" className={styles.navLink}>WOMEN</Link></li>
               <li><Link to="/men" className={styles.navLink}>MEN</Link></li>
@@ -53,7 +58,7 @@ const Header = () => {
               </button>
             </div>
             <div className={styles.userActions}>
-              <Link to="/account" className={styles.actionButton} aria-label="Account">
+              <Link to="/customerdetails" className={styles.actionButton} aria-label="CustomerDetails">{/* <Link to="/account" className={styles.actionButton} aria-label="Account"> */}
                 <i className="far fa-user"></i>
               </Link>
               <Link to="/bag" className={styles.actionButton} aria-label="Shopping Bag">
