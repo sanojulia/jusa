@@ -48,6 +48,15 @@ const PaymentDetails = () => {
                     SAVE CARD
                 </button>
             </form>
+            <div className={styles.paymentMethods}>
+              <p>WE ACCEPT:</p>
+              <div className={styles.paymentIcons}>
+                <i className="fab fa-cc-visa"></i>
+                <i className="fab fa-cc-mastercard"></i>
+                <i className="fab fa-cc-amex"></i>
+                <i className="fab fa-cc-paypal"></i>
+              </div>
+            </div>
         </div>
   )
 };

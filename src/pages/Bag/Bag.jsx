@@ -117,9 +117,9 @@ const Bag = () => {
                   <span>Total</span>
                   <span>€{total.toFixed(2)}</span>
                 </div>
-                <button className={styles.checkoutButton}>
+                <Link to="/checkout"><button className={styles.checkoutButton}>
                   CHECKOUT
-                </button>
+                </button></Link>
                 <div className={styles.paymentMethods}>
                   <p>WE ACCEPT:</p>
                   <div className={styles.paymentIcons}>

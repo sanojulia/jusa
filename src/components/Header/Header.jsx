@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import logo from '../../assets/logo_adjusted.svg';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,19 @@ const Header = () => {
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
   };
+
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+    setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -42,11 +55,11 @@ const Header = () => {
                   <i className="fa-solid fa-xmark fa-xl" style={{ color: "#ffffff" }}></i>
                 </div>
               )}
-              <li><Link to="/" className={styles.navLink}>HOME</Link></li>
-              <li><Link to="/women" className={styles.navLink}>WOMEN</Link></li>
-              <li><Link to="/men" className={styles.navLink}>MEN</Link></li>
-              <li><Link to="/sale" className={styles.navLink}>SALE</Link></li>
-              <li><Link to="/new-in" className={styles.navLink}>NEW IN</Link></li>
+              <li><Link to="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>HOME</Link></li>
+              <li><Link to="/women" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>WOMEN</Link></li>
+              <li><Link to="/men" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>MEN</Link></li>
+              <li><Link to="/sale" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>SALE</Link></li>
+              <li><Link to="/new-in" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>NEW IN</Link></li>
             </ul>
           </nav>
           

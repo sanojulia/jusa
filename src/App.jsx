@@ -12,6 +12,7 @@ import Account from './pages/Account/Account';
 import Bag from './pages/Bag/Bag';
 import Product from './pages/Product/Product'
 import CustomerDetails from './pages/CustomerDetails/CustomerDetails';
+import Checkout from './pages/Checkout/Checkout';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/customerdetails" element={<CustomerDetails />} />
             <Route path="/bag" element={<Bag />} />
             <Route path="/product/:id" element={<Product />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes> 
         </main>
         <Footer />

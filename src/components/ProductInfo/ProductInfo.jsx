@@ -9,7 +9,7 @@ const ProductInfo = ({ product }) => {
 
 
     return (
-        <div className={styles.container}>
+        <div className={styles.containerProductInfo}>
             <h3 className={styles.name}>{name}</h3>
             <div className={styles.priceContainer}>
                 {originalPrice ? (

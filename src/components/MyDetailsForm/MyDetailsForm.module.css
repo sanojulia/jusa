@@ -10,7 +10,7 @@
     color: #2d2d2d;
 }
 
-.container h2, p {
+.container h2{
     margin: 0.5em auto;
     text-align: center;
 }
